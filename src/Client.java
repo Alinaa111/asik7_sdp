@@ -3,12 +3,14 @@ public class Client {
     public static void main(String[] args) {
         YouTubeChannel youtubeChannel = new YouTubeChannel();
 
-        Observer alina = new YouTubeSubscriber("Alina");
-        Observer sanzhar = new YouTubeSubscriber("Sanzhar");
+        Observer alina = new RegularSubscriber("Alina");
+        Observer email = new EmailSubscriber("sanzhar@gmail.com");
+        Observer bot = new AnalyticsBot();
 
         // Registering observers
         youtubeChannel.addObserver(alina);
-        youtubeChannel.addObserver(sanzhar);
+        youtubeChannel.addObserver(email);
+        youtubeChannel.addObserver(bot);
 
         // Simulating youTube channel changing
         youtubeChannel.uploadVideo("Top 10 respect moments in football");
