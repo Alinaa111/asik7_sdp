@@ -1,15 +1,15 @@
 // Concrete Observer implementation
-public class YouTubeSubscriber implements Observer {
+public class RegularSubscriber implements Observer {
     // Subscriber's attribute
     private String name;
 
-    public YouTubeSubscriber(String name) {
+    public RegularSubscriber(String name) {
         this.name = name;
     }
 
     // Override method for updating
     @Override
     public void update(String videoTitle) {
-        System.out.println(name + " is watching the new video: " + videoTitle);
+        System.out.println(name + " got notification and is watching the new video: " + videoTitle);
     }
 }

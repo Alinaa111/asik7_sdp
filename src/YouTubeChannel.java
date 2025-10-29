@@ -29,7 +29,7 @@ public class YouTubeChannel implements Subject{
     // Method for uploading video and notifying subscribers
     public void uploadVideo(String videoTitle){
         this.lastUploadedVideo = videoTitle;
-        System.out.println("Uploading video: " + videoTitle);
+        System.out.println("Uploading video...: " + videoTitle);
         notifyObservers();
     }
 }
